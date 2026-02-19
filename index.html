@@ -28,19 +28,20 @@
 </section>
 
 <section class="gallery" id="gallery">
-    <img src="art1.jpg" onclick="openModal(this)">
-    <img src="art2.jpg" onclick="openModal(this)">
-    <img src="art3.jpg" onclick="openModal(this)">
-    <img src="art4.jpg" onclick="openModal(this)">
-    <img src="art5.jpg" onclick="openModal(this)">
-    <img src="art6.jpg" onclick="openModal(this)">
-    <img src="art7.jpg" onclick="openModal(this)">
-    <img src="art8.jpg" onclick="openModal(this)">
-    <img src="art9.jpg" onclick="openModal(this)">
+    <img src="art1.jpg" alt="Artwork 1" onclick="openModal(this)">
+    <img src="art2.jpg" alt="Artwork 2" onclick="openModal(this)">
+    <img src="art3.jpg" alt="Artwork 3" onclick="openModal(this)">
+    <img src="art4.jpg" alt="Artwork 4" onclick="openModal(this)">
+    <img src="art5.jpg" alt="Artwork 5" onclick="openModal(this)">
+    <img src="art6.jpg" alt="Artwork 6" onclick="openModal(this)">
+    <img src="art7.jpg" alt="Artwork 7" onclick="openModal(this)">
+    <img src="art8.jpg" alt="Artwork 8" onclick="openModal(this)">
+    <img src="art9.jpg" alt="Artwork 9" onclick="openModal(this)">
 </section>
 
 <section class="contact" id="contact">
     <h2>Contact Me</h2>
+    <!-- Formspree ID-гаа солино -->
     <form action="https://formspree.io/f/yourID" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -49,8 +50,8 @@
     </form>
 </section>
 
-<div id="modal" class="modal" onclick="closeModal()">
-    <img id="modal-img">
+<div id="modal" class="modal">
+    <img id="modal-img" alt="Preview">
 </div>
 
 <footer>
@@ -58,24 +59,56 @@
 </footer>
 
 <script>
+
+// Smooth scroll
 document.documentElement.style.scrollBehavior = "smooth";
 
+// Dark / Light toggle
 const toggle = document.getElementById("toggle");
-toggle.onclick = () => document.body.classList.toggle("light");
+
+toggle.addEventListener("click", function() {
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        toggle.textContent = "🌙";
+    } else {
+        toggle.textContent = "☀️";
+    }
+});
+
+// Modal functions
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
 
 function openModal(img){
-    document.getElementById("modal").style.display="flex";
-    document.getElementById("modal-img").src=img.src;
-}
-function closeModal(){
-    document.getElementById("modal").style.display="none";
+    modal.style.display = "flex";
+    modalImg.src = img.src;
 }
 
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e=>{
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
+function closeModal(){
+    modal.style.display = "none";
+}
+
+// Click outside to close
+modal.addEventListener("click", closeModal);
+
+// ESC to close
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+        closeModal();
+    }
 });
+
+// Custom cursor
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", function(e){
+    if(cursor){
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+    }
+});
+
 </script>
 
 </body>
