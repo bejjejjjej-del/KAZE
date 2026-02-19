@@ -225,3 +225,26 @@ footer{
         padding:30px;
     }
 }
+/* LOADER */
+#loader{
+    position:fixed;
+    inset:0;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:5000;
+    transition:opacity 1s ease;
+}
+
+#loader h1{
+    color:white;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{opacity:0.3;}
+    50%{opacity:1;}
+    100%{opacity:0.3;}
+}
+
