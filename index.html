@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KAZE Art Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>KAZE Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>KAZE</h1>
-    <p>Personal Art Collection</p>
+    <div class="logo">KAZE</div>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="cv.html">CV</a>
+        <button id="toggle">☀️</button>
     </nav>
 </header>
 
-<div class="gallery">
-    <img src="art1.jpg" alt="Art 1">
-    <img src="art2.jpg" alt="Art 2">
-    <img src="art3.jpg" alt="Art 3">
-    <img src="art4.jpg" alt="Art 4">
-    <img src="art5.jpg" alt="Art 5">
-    <img src="art6.jpg" alt="Art 6">
-    <img src="art7.jpg" alt="Art 7">
-    <img src="art8.jpg" alt="Art 8">
-    <img src="art9.jpg" alt="Art 9">
-</div>
+<section class="hero">
+    <h1>Digital Art Portfolio</h1>
+    <p>Modern Visual Storytelling</p>
+</section>
+
+<section class="gallery">
+    <img src="art1.jpg">
+    <img src="art2.jpg">
+    <img src="art3.jpg">
+    <img src="art4.jpg">
+    <img src="art5.jpg">
+    <img src="art6.jpg">
+    <img src="art7.jpg">
+    <img src="art8.jpg">
+    <img src="art9.jpg">
+</section>
 
 <footer>
     © 2026 KAZE Portfolio
 </footer>
+
+<script>
+const toggle = document.getElementById("toggle");
+toggle.onclick = function() {
+    document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
