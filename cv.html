@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KAZE - CV</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>KAZE CV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>KAZE</h1>
+    <div class="logo">KAZE</div>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="cv.html">CV</a>
+        <button id="toggle">☀️</button>
     </nav>
 </header>
 
-<div class="cv-container">
-
-    <h2>About Me</h2>
-    <p>Digital artist passionate about modern visual storytelling and experimental design.</p>
+<section class="cv">
+    <h1>About Me</h1>
+    <p>Digital artist focused on experimental and modern aesthetics.</p>
 
     <h2>Skills</h2>
     <ul>
         <li>Digital Illustration</li>
         <li>Photoshop / Procreate</li>
-        <li>Web Design (HTML, CSS)</li>
+        <li>Web Design</li>
         <li>Creative Direction</li>
     </ul>
 
     <h2>Experience</h2>
-    <p>2023 - Present: Independent Artist</p>
-    <p>2022 - Freelance Graphic Designer</p>
+    <p>2023 - Present : Independent Artist</p>
+    <p>2022 : Freelance Designer</p>
 
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>Instagram: @yourname</p>
-
-</div>
+    <a href="#" class="download">Download CV</a>
+</section>
 
 <footer>
     © 2026 KAZE Portfolio
 </footer>
+
+<script>
+const toggle = document.getElementById("toggle");
+toggle.onclick = function() {
+    document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
