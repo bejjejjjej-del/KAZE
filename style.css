@@ -247,4 +247,15 @@ footer{
     50%{opacity:1;}
     100%{opacity:0.3;}
 }
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
 
