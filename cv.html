@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>KAZE CV</title>
+<title>KAZE | CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,28 +13,32 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="cv.html">CV</a>
+        <a href="cv.html" class="active">CV</a>
         <button id="toggle">☀️</button>
     </nav>
 </header>
 
 <section class="cv">
     <h1>About Me</h1>
-    <p>Digital artist focused on modern visual storytelling and experimental aesthetics.</p>
+    <p>
+        Digital artist focused on modern visual storytelling and experimental aesthetics.
+        I create immersive visual experiences combining design and technology.
+    </p>
 
     <h2>Skills</h2>
     <ul>
         <li>Digital Illustration</li>
         <li>Photoshop / Procreate</li>
-        <li>Web Design</li>
+        <li>Web Design (HTML, CSS, JS)</li>
         <li>Creative Direction</li>
     </ul>
 
     <h2>Experience</h2>
-    <p>2023 - Present : Independent Artist</p>
-    <p>2022 : Freelance Designer</p>
+    <p><strong>2023 - Present</strong> : Independent Artist</p>
+    <p><strong>2022</strong> : Freelance Designer</p>
 
-    <a href="#" class="download">Download CV</a>
+    <!-- PDF байвал cv.pdf гэж upload хий -->
+    <a href="cv.pdf" download class="download">Download CV</a>
 </section>
 
 <footer>
@@ -43,9 +47,17 @@
 
 <script>
 const toggle = document.getElementById("toggle");
-toggle.onclick = function() {
+
+toggle.addEventListener("click", function() {
     document.body.classList.toggle("light");
-}
+
+    // Icon change
+    if(document.body.classList.contains("light")){
+        toggle.textContent = "🌙";
+    } else {
+        toggle.textContent = "☀️";
+    }
+});
 </script>
 
 </body>
