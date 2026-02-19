@@ -1,141 +1,71 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
-  color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
 }
-
-/* Header */
 
 header {
-  text-align: center;
-  padding: 60px 20px;
+    padding: 30px;
 }
 
-header h1 {
-  font-size: 3rem;
-  letter-spacing: 4px;
+h1 {
+    font-size: 48px;
+    margin: 0;
+    letter-spacing: 3px;
 }
 
-header p {
-  color: #aaa;
+p {
+    color: #bbb;
 }
-
-/* Menu */
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-  color: #00ffd5;
+    color: #00f7ff;
 }
 
-/* Gallery */
-
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
-  padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: 0.4s;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #00ffd5;
+    transform: scale(1.05);
 }
 
-/* Popup */
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+.cv-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: left;
+    padding: 20px;
 }
 
-.popup img {
-  max-width: 90%;
-  max-height: 90%;
+.cv-container h2 {
+    border-bottom: 2px solid #00f7ff;
+    padding-bottom: 5px;
 }
-
-/* Contact */
-
-.contact {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.contact input,
-.contact textarea {
-  width: 90%;
-  max-width: 400px;
-  margin: 10px;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-}
-
-.contact button {
-  padding: 12px 30px;
-  background: #00ffd5;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Footer */
 
 footer {
-  text-align: center;
-  padding: 25px;
-  color: gray;
-}
-
-/* Mobile */
-
-@media(max-width:600px){
-  header h1 {
-    font-size: 2rem;
-  }
-}
-.social {
-  margin-top: 15px;
-}
-
-.social a {
-  color: #00ffd5;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.social a:hover {
-  text-decoration: underline;
+    margin: 40px 0;
+    color: #777;
 }
