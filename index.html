@@ -22,12 +22,12 @@
     </nav>
 </header>
 
-<section class="hero" id="home">
+<section class="hero reveal" id="home">
     <h1>Digital Art Experience</h1>
     <p>Modern • Experimental • Immersive</p>
 </section>
 
-<section class="gallery" id="gallery">
+<section class="gallery reveal" id="gallery">
     <img src="art1.jpg" alt="Artwork 1" onclick="openModal(this)">
     <img src="art2.jpg" alt="Artwork 2" onclick="openModal(this)">
     <img src="art3.jpg" alt="Artwork 3" onclick="openModal(this)">
@@ -39,9 +39,8 @@
     <img src="art9.jpg" alt="Artwork 9" onclick="openModal(this)">
 </section>
 
-<section class="contact" id="contact">
+<section class="contact reveal" id="contact">
     <h2>Contact Me</h2>
-    <!-- Formspree ID-гаа солино -->
     <form action="https://formspree.io/f/yourID" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -76,7 +75,7 @@ toggle.addEventListener("click", function() {
     }
 });
 
-// Modal functions
+// Modal
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
 
@@ -89,10 +88,8 @@ function closeModal(){
     modal.style.display = "none";
 }
 
-// Click outside to close
 modal.addEventListener("click", closeModal);
 
-// ESC to close
 document.addEventListener("keydown", function(e){
     if(e.key === "Escape"){
         closeModal();
@@ -108,6 +105,23 @@ document.addEventListener("mousemove", function(e){
         cursor.style.top = e.pageY + "px";
     }
 });
+
+// Scroll reveal
+function reveal(){
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(function(el){
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal);
+reveal();
 
 </script>
 
