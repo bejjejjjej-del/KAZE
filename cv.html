@@ -6,11 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <div class="logo">KAZE</div>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="cv.html" class="active">CV</a>
@@ -28,8 +27,8 @@
     <h2>Skills</h2>
     <ul>
         <li>Digital Illustration</li>
-        <li>Photoshop / Procreate</li>
-        <li>Web Design (HTML, CSS, JS)</li>
+        <li>Adobe Photoshop / Procreate</li>
+        <li>Web Design (HTML, CSS, JavaScript)</li>
         <li>Creative Direction</li>
     </ul>
 
@@ -37,12 +36,12 @@
     <p><strong>2023 - Present</strong> : Independent Artist</p>
     <p><strong>2022</strong> : Freelance Designer</p>
 
-    <!-- PDF байвал cv.pdf гэж upload хий -->
-    <a href="cv.pdf" download class="download">Download CV</a>
+    <!-- PDF файл байгаа бол cv.pdf гэж upload хий -->
+    <a href="cv.pdf" download class="download">Download CV (PDF)</a>
 </section>
 
 <footer>
-    © 2026 KAZE Portfolio
+    <p>© 2026 KAZE Project</p>
 </footer>
 
 <script>
@@ -51,7 +50,6 @@ const toggle = document.getElementById("toggle");
 toggle.addEventListener("click", function() {
     document.body.classList.toggle("light");
 
-    // Icon change
     if(document.body.classList.contains("light")){
         toggle.textContent = "🌙";
     } else {
